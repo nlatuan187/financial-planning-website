@@ -49,13 +49,13 @@ function HeroSection() {
             <a
               href="https://muanha.finful.co/"
               target="_blank"
-              className="flex overflow-hidden flex-col justify-center px-3 py-2 w-full bg-cyan-600 rounded-lg bg-blend-normal shadow-[0px_2px_10px_rgba(16,24,40,0.08)]"
+              className="flex overflow-hidden flex-col justify-center px-3 py-2 w-full bg-cyan-600 rounded-lg bg-[#00ACB8] shadow-[0px_2px_10px_rgba(16,24,40,0.08)]"
             >
               <div className="flex gap-2.5 items-center w-full">
                 <span className="self-stretch my-auto">Lập kế hoạch mua nhà</span>
                 <img
                   src="/arrow.svg"
-                  className="object-contain shrink-0 self-stretch my-auto w-3 bg-blend-normal aspect-square"
+                  className="object-contain shrink-0 self-stretch my-auto w-3 bg-[#00ACB8] aspect-square"
                   alt="Arrow icon"
                 />
               </div>
@@ -101,7 +101,7 @@ function HeroSection() {
         <motion.a
           href="https://muanha.finful.co/"
           target="_blank"
-          className="flex overflow-hidden gap-2.5 self-center px-6 py-4 mt-9 max-w-full text-lg font-medium tracking-normal leading-none text-center text-white bg-cyan-600 rounded-xl bg-blend-normal shadow-[0px_2px_10px_rgba(16,24,40,0.08)] w-[147px] max-md:px-5"
+          className="flex overflow-hidden gap-2.5 self-center px-6 py-4 mt-9 max-w-full text-lg font-medium tracking-normal leading-none text-center text-white bg-[#00ACB8] rounded-xl bg-blend-normal shadow-[0px_2px_10px_rgba(16,24,40,0.08)] w-[147px] max-md:px-5"
           variants={itemVariants}
         >
           <span>Truy cập</span>

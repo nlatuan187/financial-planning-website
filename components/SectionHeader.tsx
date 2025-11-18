@@ -21,14 +21,14 @@ function SectionHeader({
       transition={{ duration: 0.5 }}
     >
       {tagline && (
-        <p className="bg-cyan-100 border border-cyan-600 text-sm font-medium px-4 py-2 rounded-full shadow-md">
+        <p className="bg-cyan-100 border border-cyan-600 text-sm max-md:text-xs font-medium px-4 py-2 rounded-full shadow-md">
           {tagline}
         </p>
       )}
-      <h2 className="mt-4 text-5xl font-bold leading-tight max-md:text-2xl text-neutral-800 max-md:max-w-full max-md:text-4xl flex flex-col items-center">
+      <h2 className="mt-4 text-5xl font-bold leading-tight max-md:text-xl text-neutral-800 max-md:max-w-full max-md:text-4xl flex flex-col items-center">
         {title}
       </h2>
-      <p className="mt-4 px-10 max-md:px-1 text-lg max-md:text-sm font-medium text-center leading-7 text-neutral-600 max-md:max-w-full max-w-2xl max-md:text-base">
+      <p className="mt-4 px-10 max-md:px-4 text-lg max-md:text-xs font-medium text-center leading-7 text-neutral-600 max-md:max-w-full max-w-2xl max-md:text-base">
         {subtitle}
       </p>
     </motion.div>

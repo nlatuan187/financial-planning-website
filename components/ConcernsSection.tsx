@@ -9,8 +9,10 @@ const ConcernsSection = () => {
       imageSrc: "/Concern1.png", // Please replace with the correct image path
       title: (
         <>
-          Tôi có nên <br />
-          <span className="text-cyan-600">mua nhà bây giờ?</span>
+          Tôi có nên <br/>
+          <span className="bg-gradient-to-r from-[#7FD5DB] to-[#00ACB8] bg-clip-text text-transparent">
+            mua nhà bây giờ?
+          </span>
         </>
       ),
       description:
@@ -21,7 +23,9 @@ const ConcernsSection = () => {
       title: (
         <>
           Tôi có thể <br />
-          <span className="text-cyan-600">mua nhà hay không?</span>
+          <span className="bg-gradient-to-r from-[#7FD5DB] to-[#00ACB8] bg-clip-text text-transparent">
+            mua nhà hay không?
+          </span>
         </>
       ),
       description:
@@ -32,7 +36,9 @@ const ConcernsSection = () => {
       title: (
         <>
           Tôi cần phải <br />
-          <span className="text-cyan-600">làm gì để mua được nhà?</span>
+          <span className="bg-gradient-to-r from-[#7FD5DB] to-[#00ACB8] bg-clip-text text-transparent">
+            làm gì để mua được nhà?
+          </span>
         </>
       ),
       description:

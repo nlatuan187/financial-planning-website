@@ -1,10 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function ActionPlanSection() {
   return (
     <section className="mt-14 w-full max-w-[952px] max-md:mt-10 max-md:max-w-full">
       <div className="flex max-md:flex-col">
-        <div className="w-[315px] max-md:ml-0 max-md:w-full">
+        <motion.div initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="w-[315px] max-md:ml-0 max-md:w-full"
+        >
           <article className="flex flex-col h-full w-full rounded-xl bg-gray-100 px-7 pt-5">
             <div>
               <h3 className="text-xl font-semibold tracking-normal text-neutral-800">
@@ -23,8 +28,13 @@ function ActionPlanSection() {
               />
             </div>
           </article>
-        </div>
-        <div className="ml-2 w-[629px] max-md:ml-0 max-md:w-full">
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="ml-2 w-[629px] max-md:ml-0 max-md:w-full"
+        >
           <div className="grow max-md:mt-1.5 max-md:max-w-full">
             <article className="flex relative flex-col justify-center items-start p-px w-full text-xs font-medium tracking-normal rounded-xl min-h-[309px] text-zinc-600 max-md:pr-5 max-md:max-w-full rounded-xl">
               <img
@@ -83,7 +93,7 @@ function ActionPlanSection() {
               </div>
             </article>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

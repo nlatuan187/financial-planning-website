@@ -25,16 +25,17 @@ const FinancialPlanningPage = () => {
         <ConcernsSection />
       </section>
 
-      <section className="flex flex-col items-center justify-center mt-40 max-md:mt-10 w-full px-3">
+      <section className="flex flex-col items-center justify-center mt-20 w-full px-3">
         <SectionHeader
           tagline="Bạn sẽ nhận được"
           title={
             <>
+              
               Làm rõ
               <br />
               <span className="italic">
-                <span className="text-cyan-600">nhu cầu</span> và{' '}
-                <span className="text-cyan-600">khả năng</span> mua nhà
+                <span className="text-[#00ACB8]">nhu cầu</span> và{' '}
+                <span className="text-[#00ACB8]">khả năng</span> mua nhà
               </span>
             </>
           }
@@ -43,13 +44,13 @@ const FinancialPlanningPage = () => {
         <FinancialCapacitySection />
       </section>
 
-      <section className="flex flex-col items-center justify-center mt-48 max-md:mt-10 w-full px-3">
+      <section className="flex flex-col items-center justify-center mt-20 w-full px-3">
         <SectionHeader
           title={
             <>
               Biết được căn nhà mơ ước
               <br />
-              <span className="italic text-cyan-600">có khả thi không</span>
+              <span className="italic text-[#00ACB8]">có khả thi không</span>
             </>
           }
           subtitle="Finful cho bạn biết mong muốn mua nhà của bạn có thể thực hiện được hay không"
@@ -57,13 +58,13 @@ const FinancialPlanningPage = () => {
         <FeasibilitySection />
       </section>
 
-      <section className="flex flex-col items-center justify-center mt-72 max-md:mt-10 w-full px-3">
+      <section className="flex flex-col items-center justify-center mt-20 w-full px-3">
         <SectionHeader
           title={
             <>
               Hiểu được "cái giá" và
               <br />
-              <span className="italic text-cyan-600">
+              <span className="italic text-[#00ACB8]">
                 có được kế hoạch tối ưu
               </span>
             </>
@@ -73,13 +74,13 @@ const FinancialPlanningPage = () => {
         <PersonalizedPlanSection />
       </section>
 
-      <section className="flex flex-col items-center justify-center mt-60 max-md:mt-10 w-full px-3">
+      <section className="flex flex-col items-center justify-center mt-20 w-full px-3">
         <SectionHeader
           title={
             <>
               Được đồng hành trên
               <br />
-              <span className="italic text-cyan-600">
+              <span className="italic text-[#00ACB8]">
                 hành trình sở hữu căn nhà
               </span>
             </>
@@ -89,11 +90,11 @@ const FinancialPlanningPage = () => {
         <ActionPlanSection />
       </section>
 
-      <section className="flex flex-col items-center justify-center mt-20 max-md:mt-10 w-full px-3">
+      <section className="flex flex-col items-center justify-center mt-20 w-full px-3">
         <FeaturesSection />
       </section>
 
-      <div className="flex self-stretch mt-32 w-full bg-gray-200 px-3 bg-blend-normal min-h-px max-md:mt-10 max-md:max-w-full" />
+      <div className="flex self-stretch w-full bg-gray-200 px-3 bg-blend-normal min-h-px mt-20 max-md:max-w-full" />
 
       <div className="px-3 flex items-center justify-center">
         <CTASection />

@@ -1,7 +1,13 @@
 import type { Metadata } from 'next'
 import React from 'react'
 import './globals.css'
+import { Inter } from 'next/font/google'
 
+const inter = Inter({
+  subsets: ['latin', 'vietnamese'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 /**
  * Root layout component for the Next.js App Router
  * This component wraps all pages and provides global layout structure
@@ -28,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="vi">
+    <html lang="vi" className={inter.variable}>
       <body>
         {children}
       </body>

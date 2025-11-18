@@ -1,9 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function PersonalizedPlanSection() {
   return (
     <section className="mt-14 w-full max-w-[952px] max-md:mt-10 max-md:max-w-full">
-      <div className="flex gap-2 max-md:flex-col">
+      <motion.div initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex gap-2 max-md:flex-col"
+      >
         <div className="w-[394px] max-md:ml-0 max-md:w-full pt-2">
           <article className="relative h-full w-full rounded-xl overflow-hidden">
             <img
@@ -33,7 +38,7 @@ function PersonalizedPlanSection() {
             />
           </article>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

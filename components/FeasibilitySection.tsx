@@ -7,11 +7,11 @@ function FeasibilitySection() {
       <motion.div initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="pt-8 w-full bg-white rounded-xl border border-gray-200 border-solid"
+        className="pt-8 max-md:pt-4 w-full bg-white rounded-xl border border-gray-200 border-solid"
       >
         <div className="flex gap-5 max-md:flex-col">
           <div className="w-[67%] max-md:ml-0 max-md:w-full">
-            <div className="z-10 grow mt-2.5 max-md:mt-10 max-md:mr-0 max-md:max-w-full">
+            <div className="z-10 grow mt-2.5 max-md:mr-0 max-md:max-w-full">
               <article className="flex flex-col ml-12 max-w-full w-[361px] max-md:ml-2.5">
                 <h3 className="self-start text-xl font-semibold tracking-normal text-neutral-800">
                   Đánh giá khả thi
@@ -62,17 +62,17 @@ function FeasibilitySection() {
             </article>
           </div>
           <div className="w-6/12 max-md:ml-0 max-md:w-full rounded-xl">
-            <article className="flex relative flex-col grow rounded-xl items-start px-8 pt-36 pb-6 min-h-[219px] max-md:px-5 max-md:pt-24 max-md:mt-2 max-md:max-w-full">
+            <article className="flex relative flex-col grow justify-end rounded-xl items-start p-8 min-h-[219px] max-md:p-6 max-md:mt-2 max-md:max-w-full">
               <img
                 src="/result.png"
                 className="object-cover absolute inset-0 size-full rounded-xl"
                 alt="Timeline background"
               />
-              <div className="relative max-w-full w-[283px] ">
+              <div className="relative max-w-full w-[283px]">
                 <h4 className="text-base font-semibold tracking-normal text-white">
                   Đề xuất thời gian mua nhà sớm nhất
                 </h4>
-                <p className="text-xs font-medium tracking-normal leading-4 text-stone-300">
+                <p className="mt-2 text-xs font-medium tracking-normal leading-4 text-stone-300">
                   Nếu khả thi, chúng tôi đưa ra năm sớm nhất bạn có thể sở hữu
                   căn nhà mơ ước.
                 </p>

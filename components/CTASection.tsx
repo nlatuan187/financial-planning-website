@@ -19,7 +19,7 @@ function CTASection() {
         </p>
         <a
           href="https://muanha.finful.co/"
-          className="flex gap-2.5 justify-center items-center px-2.5 py-3 mt-8 max-w-full text-white rounded-3xl min-h-[41px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[161px] bg-cyan-600"
+          className="flex gap-2.5 justify-center items-center px-2.5 py-3 mt-8 max-w-full text-white rounded-full min-h-[41px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[161px] bg-[#00ACB8]"
         >
           <span className="self-stretch my-auto">Truy cập</span>
         </a>

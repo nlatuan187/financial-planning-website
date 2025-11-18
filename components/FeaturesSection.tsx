@@ -40,7 +40,7 @@ function FeaturesSection() {
   ];
 
   return (
-    <section className="flex flex-col mt-28 w-full max-w-[1189px] max-md:mt-10 max-md:max-w-full">
+    <section className="flex flex-col mt-10 w-full max-w-[1189px] max-md:mt-10 max-md:max-w-full">
       <SectionHeader
         title={
           <>
@@ -53,7 +53,7 @@ function FeaturesSection() {
       />
 
       <motion.div
-        className="flex justify-center gap-8 mt-16 w-full max-md:flex-wrap max-md:mt-10 max-md:max-w-full"
+        className="flex justify-center gap-8 mt-5 w-full max-md:flex-wrap max-md:mt-10 max-md:max-w-full"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

@@ -9,7 +9,7 @@ interface FeatureCardProps {
 function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     // Thay đổi nền, padding và layout
-    <article className="flex flex-col flex-1 p-8 rounded-2xl bg-cyan-50 min-w-[300px]">
+    <article className="flex flex-col flex-1 p-8 rounded-2xl bg-[#ECF8F9] min-w-[300px]">
       {/* Icon mới */}
       <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-teal-400 to-cyan-500 shadow-md">
         <img
