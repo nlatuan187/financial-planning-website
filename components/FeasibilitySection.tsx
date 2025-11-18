@@ -1,9 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function FeasibilitySection() {
   return (
     <section className="mt-12 w-full max-w-[940px] max-md:mt-10 max-md:max-w-full">
-      <div className="pt-8 w-full bg-white rounded-xl border border-gray-200 border-solid">
+      <motion.div initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="pt-8 w-full bg-white rounded-xl border border-gray-200 border-solid"
+      >
         <div className="flex gap-5 max-md:flex-col">
           <div className="w-[67%] max-md:ml-0 max-md:w-full">
             <div className="z-10 grow mt-2.5 max-md:mt-10 max-md:mr-0 max-md:max-w-full">
@@ -34,9 +39,12 @@ function FeasibilitySection() {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="mt-1 w-full max-w-[940px] max-md:max-w-full">
+      <motion.div initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="mt-1 w-full max-w-[940px] max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           <div className="w-6/12 max-md:ml-0 max-md:w-full rounded-xl">
             <article className="flex relative flex-col grow justify-center p-0.5 text-xl font-medium tracking-normal leading-6 text-center text-white min-h-[225px] max-md:mt-1.5 max-md:max-w-full">
@@ -72,7 +80,7 @@ function FeasibilitySection() {
             </article>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

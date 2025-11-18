@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import { motion } from "framer-motion";
 import HeroSection from "./HeroSection";
 import FeaturesSection from "./FeaturesSection";
 import FinancialCapacitySection from "./FinancialCapacitySection";
@@ -9,26 +9,49 @@ import ActionPlanSection from "./ActionPlanSection";
 import CTASection from "./CTASection";
 import Footer from "./Footer";
 import SectionHeader from "./SectionHeader";
+import ConcernsSection from "./ConcernsSection"; // Import component mới
 
-function FinancialPlanningPage() {
+const FinancialPlanningPage = () => {
   return (
-    <main className="flex flex-col items-center bg-white bg-blend-normal">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75 }}
+      className="bg-gray-50" // Thay đổi màu nền để thấy rõ shadow
+    >
       <HeroSection />
-      <section className="flex flex-col items-center justify-center mt-20 max-md:mt-10 w-full px-3">
-        <FeaturesSection />
+
+      <section className="flex flex-col items-center justify-center mt-40 max-md:mt-25 w-full px-3">
+        <ConcernsSection />
       </section>
 
       <section className="flex flex-col items-center justify-center mt-40 max-md:mt-10 w-full px-3">
         <SectionHeader
-          title="Hiểu về năng lực tài chính của bạn"
-          subtitle="Finful thu thập thông tin cơ bản về tình hình tài chính của bạn để đưa ra phân tích và đề xuất phù hợp."
+          tagline="Bạn sẽ nhận được"
+          title={
+            <>
+              Làm rõ
+              <br />
+              <span className="italic">
+                <span className="text-cyan-600">nhu cầu</span> và{' '}
+                <span className="text-cyan-600">khả năng</span> mua nhà
+              </span>
+            </>
+          }
+          subtitle="Finful hiểu về căn nhà bạn đang mơ ước và thu thập thông tin cơ bản về tình hình tài chính của bạn"
         />
         <FinancialCapacitySection />
       </section>
 
       <section className="flex flex-col items-center justify-center mt-48 max-md:mt-10 w-full px-3">
         <SectionHeader
-          title="Xác định tính khả thi của mục tiêu bạn đặt ra"
+          title={
+            <>
+              Biết được căn nhà mơ ước
+              <br />
+              <span className="italic text-cyan-600">có khả thi không</span>
+            </>
+          }
           subtitle="Finful cho bạn biết mong muốn mua nhà của bạn có thể thực hiện được hay không"
         />
         <FeasibilitySection />
@@ -36,7 +59,15 @@ function FinancialPlanningPage() {
 
       <section className="flex flex-col items-center justify-center mt-72 max-md:mt-10 w-full px-3">
         <SectionHeader
-          title="Cá nhân hoá kế hoạch mua nhà của bạn"
+          title={
+            <>
+              Hiểu được "cái giá" và
+              <br />
+              <span className="italic text-cyan-600">
+                có được kế hoạch tối ưu
+              </span>
+            </>
+          }
           subtitle="Finful thiết kế một kế hoạch dòng tiền mà ở đó bạn được phép điều chỉnh các con số phù hợp nhất với bản thân"
         />
         <PersonalizedPlanSection />
@@ -44,20 +75,32 @@ function FinancialPlanningPage() {
 
       <section className="flex flex-col items-center justify-center mt-60 max-md:mt-10 w-full px-3">
         <SectionHeader
-          title="Xây dựng kế hoạch hành động cho bạn"
+          title={
+            <>
+              Được đồng hành trên
+              <br />
+              <span className="italic text-cyan-600">
+                hành trình sở hữu căn nhà
+              </span>
+            </>
+          }
           subtitle="Finful thiết kế một kế hoạch hành động với nhiều cột mốc chia nhỏ để bạn dễ hình dung từng bước biến gần hơn tới mục tiêu mua nhà"
         />
         <ActionPlanSection />
       </section>
 
+      <section className="flex flex-col items-center justify-center mt-20 max-md:mt-10 w-full px-3">
+        <FeaturesSection />
+      </section>
+
       <div className="flex self-stretch mt-32 w-full bg-gray-200 px-3 bg-blend-normal min-h-px max-md:mt-10 max-md:max-w-full" />
 
-      <div className="px-3">
+      <div className="px-3 flex items-center justify-center">
         <CTASection />
       </div>
       <Footer/>
-    </main>
+    </motion.div>
   );
-}
+};
 
 export default FinancialPlanningPage;

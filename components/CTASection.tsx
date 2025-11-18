@@ -1,9 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function CTASection() {
   return (
     <section className="flex flex-col justify-center items-start px-64 py-14 mt-20 mb-10 w-full text-base font-medium tracking-tight text-center text-black rounded-3xl bg-slate-100 max-w-[951px] min-h-[318px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
-      <div className="flex flex-col items-center w-full max-w-[430px]">
+      <motion.div initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col items-center w-full max-w-[430px]"
+      >
         <h2 className="text-3xl font-semibold tracking-tight">
           Chinh phục
           <br />
@@ -18,7 +23,7 @@ function CTASection() {
         >
           <span className="self-stretch my-auto">Truy cập</span>
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }

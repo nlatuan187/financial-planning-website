@@ -1,6 +1,21 @@
 import React from "react";
 import FeatureCard from "./FeatureCard";
 import SectionHeader from "./SectionHeader";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 function FeaturesSection() {
   const features = [
@@ -26,21 +41,38 @@ function FeaturesSection() {
 
   return (
     <section className="flex flex-col mt-28 w-full max-w-[1189px] max-md:mt-10 max-md:max-w-full">
-      <SectionHeader 
-        title="Finful đứng về phía bạn, vì quyền lợi của bạn"
+      <SectionHeader
+        title={
+          <>
+            Finful đứng về phía bạn,{' '}
+            <br />
+            <span>vì quyền lợi của bạn</span>
+          </>
+        }
         subtitle=""
       />
 
-      <div className="flex flex-wrap gap-2 items-center mt-16 w-full max-md:mt-10 max-md:max-w-full">
+      <motion.div
+        className="flex justify-center gap-8 mt-16 w-full max-md:flex-wrap max-md:mt-10 max-md:max-w-full"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+      >
         {features.map((feature, index) => (
-          <FeatureCard
+          <motion.div
             key={index}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
+            className="flex flex-col flex-1" // Thêm class này để các thẻ co giãn bằng nhau
+            variants={itemVariants}
+            transition={{ duration: 0.5 }}
+          >
+            <FeatureCard
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+            />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
