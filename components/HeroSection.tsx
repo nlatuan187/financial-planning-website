@@ -190,18 +190,18 @@ function HeroSection() {
             <a
               className="inline-flex items-center justify-center px-8 py-2 text-xl font-bold text-white bg-gradient-to-r from-[#00ACB8] via-[#7FD5DB] to-[#00ACB8] rounded-full shadow-lg transition-colors"
             >
-              Sắp ra mắt
+              SẲP RA MẮT
             </a>
           </motion.div>
           <motion.h1
-            className="text-5xl font-semibold tracking-tight leading-[1.2] max-md:text-4xl bg-gradient-to-r from-[#7FD5DB] via-[#00ACB8] to-[#008993] bg-clip-text text-transparent"
+            className="text-[60px] font-semibold tracking-tight leading-[1.2] max-md:text-4xl bg-gradient-to-r from-[#7FD5DB] via-[#00ACB8] to-[#008993] bg-clip-text text-transparent"
             variants={itemVariants}
           >
             Finful mobile app
           </motion.h1>
 
           <motion.p
-            className="mt-6 text-[25px] text-slate-600 font-bold leading-relaxed"
+            className=" text-[25px] text-slate-600 font-bold leading-relaxed"
             variants={itemVariants}
           >
             Tích hợp AI, giúp người Việt tự tin mua nhà
@@ -219,7 +219,7 @@ function HeroSection() {
                     <path d="M12.3333 1L5 8.33333L1.66667 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <span className="text-slate-700 text-[20px] max-md:text-sm font-medium">{item}</span>
+                <span className="text-slate-600 text-[20px] max-md:text-sm font-medium">{item}</span>
               </motion.div>
             ))}
           </motion.div>
