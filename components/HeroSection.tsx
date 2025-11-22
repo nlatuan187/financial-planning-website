@@ -201,7 +201,7 @@ function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className=" text-[25px] text-slate-600 font-bold leading-relaxed"
+            className="text-[25px] text-slate-600 font-bold leading-relaxed"
             variants={itemVariants}
           >
             Tích hợp AI, giúp người Việt tự tin mua nhà
