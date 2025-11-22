@@ -86,7 +86,7 @@ function FinancialCapacitySection() {
                 <div className="relative z-10 flex flex-col justify-end h-full p-8 max-md:p-6 text-white">
                   <div className="max-w-xs">
                     <h3 className="text-2xl max-md:text-xl font-bold tracking-tight text-gray-900">
-                      Tính toán tức thì
+                      Hiểu về mong muốn của bạn
                     </h3>
                     <p className="mt-2 text-base max-md:text-sm font-medium text-gray-800">
                       Tự động đưa ra các con số liên quan đến mục tiêu mua nhà
@@ -96,13 +96,26 @@ function FinancialCapacitySection() {
                 </div>
               </article>
               {/* Thay đổi: Bỏ mt-1.5, vì đã dùng gap ở container cha */}
-              <div className="flex flex-col justify-center px-9 py-7 rounded-xl border border-gray-200 border-solid bg-light-cyan max-md:px-5 max-md:max-w-full">
+              <article className="relative w-full overflow-hidden rounded-xl group">
                 <img
                   src="/Capacity2.png"
-                  className="object-contain w-full bg-white aspect-[2.76] max-md:max-w-full"
-                  alt="Financial calculation interface"
+                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                  alt="Expert perspective background"
                 />
-              </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent opacity-80" />
+
+                <div className="absolute inset-0 flex flex-col justify-end p-8 max-md:p-6">
+                  <div className="relative z-10">
+                    <h3 className="text-2xl max-md:text-xl font-bold tracking-tight text-gray-900 mb-2">
+                      Góc nhìn của chuyên gia
+                    </h3>
+                    <p className="text-base max-md:text-sm font-medium text-gray-800 max-w-xl">
+                      Cung cấp các thông tin về thị trường, về tài chính cá nhân để bạn hiểu rằng mỗi khoản tiền bạn có ảnh hưởng thế nào đến kế hoạch mua nhà.
+                    </p>
+                  </div>
+                </div>
+              </article>
             </div>
           </motion.div>
         </div>

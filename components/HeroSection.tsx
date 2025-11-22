@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const menuItems = [
   {
@@ -50,6 +50,14 @@ function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % 3);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmenuToggle = (id: string) => {
     setOpenMobileSubmenu(openMobileSubmenu === id ? null : id);
@@ -169,7 +177,7 @@ function HeroSection() {
       </nav>
 
       {/* Main Content */}
-      <div className="flex relative flex-col lg:flex-row items-center justify-between mt-16 max-md:mt-10 w-full max-w-[1200px] self-center gap-10">
+      <div className="flex relative flex-col lg:flex-row items-center justify-between mt-12 max-md:mt-10 w-full max-w-[1200px] self-center gap-10">
         {/* Left Column: Text Content */}
         <motion.div
           className="flex flex-col w-full lg:w-1/2 max-md:max-w-full"
@@ -178,7 +186,7 @@ function HeroSection() {
           viewport={{ once: true }}
           variants={containerVariants}
         >
-          <motion.div className="mt-10 mb-4" variants={itemVariants}>
+          <motion.div className="mb-4" variants={itemVariants}>
             <a
               className="inline-flex items-center justify-center px-8 py-2 text-xl font-bold text-white bg-gradient-to-r from-[#00ACB8] via-[#7FD5DB] to-[#00ACB8] rounded-full shadow-lg transition-colors"
             >
@@ -193,13 +201,13 @@ function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className="mt-6 text-lg text-slate-600 font-bold leading-relaxed max-w-[500px]"
+            className="mt-6 text-[25px] text-slate-600 font-bold leading-relaxed"
             variants={itemVariants}
           >
             Tích hợp AI, giúp người Việt tự tin mua nhà
           </motion.p>
 
-          <motion.div className="mt-8 flex flex-col gap-4" variants={containerVariants}>
+          <motion.div className="mt-8 flex flex-col gap-4 w-fit" variants={containerVariants}>
             {[
               "Đánh giá tính khả thi của mục tiêu mua nhà",
               "Thiết kế kế hoạch tích luỹ tài chính phù hợp",
@@ -211,7 +219,7 @@ function HeroSection() {
                     <path d="M12.3333 1L5 8.33333L1.66667 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <span className="text-slate-700 max-md:text-sm font-medium">{item}</span>
+                <span className="text-slate-700 text-[20px] max-md:text-sm font-medium">{item}</span>
               </motion.div>
             ))}
           </motion.div>
@@ -219,18 +227,76 @@ function HeroSection() {
 
         {/* Right Column: Image */}
         <motion.div
-          className="flex w-full lg:w-1/2 justify-center lg:justify-end relative"
+          className="flex w-full lg:w-1/2 justify-center items-center relative h-[600px]"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
-          {/* Decorative Background Elements could go here */}
-          <div className="relative z-10">
-            <img
-              src="/Herosection.png"
-              className="object-contain w-full h-auto max-w-[600px]"
-              alt="Financial Planning Companion"
-            />
+          <img
+            src="/iphoneBG.png"
+            className="object-cover absolute inset-0 size-80%"
+            alt="Hero background"
+          />
+          {/* Carousel Images */}
+          <div className="relative w-full h-full flex justify-center items-center">
+            {[
+              "/iPhone 14 Pro 1.png",
+              "/iPhone 14 Pro 3.png",
+              "/iPhone 14 Pro 2.png"
+            ].map((src, index) => {
+              // Calculate position relative to active index
+              const position = (index - activeIndex + 3) % 3;
+
+              // Determine styles based on position
+              let x = 0;
+              let scale = 1;
+              let zIndex = 10;
+              let opacity = 1;
+              let rotate = 0;
+
+              if (position === 0) {
+                // Center
+                x = 0;
+                scale = 1;
+                zIndex = 20;
+                opacity = 1;
+                rotate = 0;
+              } else if (position === 1) {
+                // Right
+                x = 130;
+                scale = 0.8;
+                zIndex = 10;
+                opacity = 0.6;
+                rotate = 0;
+              } else {
+                // Left
+                x = -130;
+                scale = 0.8;
+                zIndex = 10;
+                opacity = 0.6;
+                rotate = 0;
+              }
+
+              return (
+                <motion.img
+                  key={index}
+                  src={src}
+                  className="absolute max-w-[340px] w-full h-auto object-contain rounded-3xl"
+                  animate={{
+                    x,
+                    scale,
+                    opacity,
+                    zIndex,
+                    rotate
+                  }}
+                  transition={{
+                    duration: 0.8,
+                    ease: "easeInOut"
+                  }}
+                  alt={`Financial Planning App Screen ${index + 1}`}
+                />
+              );
+            })}
           </div>
         </motion.div>
       </div>
