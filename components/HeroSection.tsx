@@ -74,7 +74,7 @@ function HeroSection() {
         <div className="relative flex justify-between items-center max-w-full my-2 mx-auto px-4">
           <Link href="/">
             <img
-              src="/finful.png"
+              src="/FinfulLogo.png"
               alt="Finful Logo"
               className="h-[33px] w-[115px] max-sm:h-7 max-sm:w-[100px]"
             />
